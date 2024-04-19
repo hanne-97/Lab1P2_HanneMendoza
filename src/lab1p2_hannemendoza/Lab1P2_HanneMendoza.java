@@ -73,23 +73,21 @@ public class Lab1P2_HanneMendoza {
             System.out.println("");
         }
         }//fin método imprimirMatriz
-    
-    public static int [] BubbleSort(int [][] matriz){              
-        int temp;
-        
-        int [] array = new int[matriz.length];
-        //caso base
-        for (int i = 0; i < matriz.length; i++){
-               if(array[i] > array[i + 1]){
-                    temp = array[i];
-                    //array[i] = array[i + 1];
-                    //array[i + 1] = temp;                    
-                }           
+      
+    public static int[] BubbleSort(int[] arreglo) {
+    int n = arreglo.length;
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arreglo[j] > arreglo[j + 1]) {
+                int temp = arreglo[j];
+                arreglo[j] = arreglo[j + 1];
+                arreglo[j + 1] = temp;
+            }
         }
-        //caso recursivo    
-        return array;  
-    }//fin método BubbleSort    
-    
+    }
+        return arreglo;
+    }
+
      public static void imprimirArreglo(int[] array){        
         for (int i = 0; i < array.length; i++) {
             System.out.print("[" + array[i] + "] ");            
