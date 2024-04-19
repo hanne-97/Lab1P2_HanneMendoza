@@ -97,3 +97,4 @@ public class Lab1P2_HanneMendoza {
         
      // dato curioso: sabian que con la inge Laura no vimos matrices
 }//clase
+// dato curioso: si algun dia quien cometer un homicidio y no quieren dejar rastro dejen el cuerpo en un lago y asi se descompone y no hay rastros
