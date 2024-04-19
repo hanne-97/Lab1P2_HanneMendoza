@@ -30,8 +30,8 @@ public class Lab1P2_HanneMendoza {
             System.out.println("Matriz ordenada:");
             int [] array = BubbleSort(mat);
             imprimirArreglo(array);
-            int mediana = (array.length/2)+1;
             
+            int mediana = (array.length/2)+1;            
             ArrayList medianas = new ArrayList();
             medianas.add(mediana);            
             System.out.println("");
@@ -76,6 +76,7 @@ public class Lab1P2_HanneMendoza {
     
     public static int [] BubbleSort(int [][] matriz){              
         int temp;
+        
         int [] array = new int[matriz.length];
         //caso base
         for (int i = 0; i < matriz.length; i++){
@@ -96,4 +97,5 @@ public class Lab1P2_HanneMendoza {
         System.out.println("");
         }//fin método imprimirArreglo
         
+     // dato curioso: sabian que con la inge Laura no vimos matrices
 }//clase
