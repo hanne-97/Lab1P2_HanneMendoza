@@ -6,7 +6,7 @@ package lab1p2_hannemendoza;
 import java.util.Scanner;
 import java.util.Random;
 /**
- *
+ * Fila 02 Asiento 3
  * @author Hanne
  */
 
@@ -17,25 +17,27 @@ public class Lab1P2_HanneMendoza {
     public static void main(String[] args) {
        
         System.out.println("Mediana de las medianas\n");
-        System.out.println("Ingrese el tamaño de matriz deseado: ");
+        System.out.println("Ingrese el tamaño de matriz deseado: ");    
         int tam = kore.nextInt();
-        System.out.println("Matriz generada: ");
-        int [][] mat = generarMatriz(tam);
-        imprimirMatriz(mat);
-        
-        
-        
-        
-        
-        
-      
-        
-        
-        
-        
-        
-        
-        
+        if(tam > 4 && tam%2 != 0){
+            System.out.println("Matriz generada: ");
+            int [][] mat = generarMatriz(tam);
+            imprimirMatriz(mat);
+            
+            System.out.println("");
+            
+            System.out.println("Matriz ordenada:"); //forma recursiva bubble sort(ascendente)
+            int [] array = BubbleSort(mat);
+            
+            System.out.println("Arreglo de medianas: ");
+            
+            System.out.println("Arreglo de medianas ordenado: ");
+               
+            System.out.println("Mediana de las medianas: ");
+            
+        }else{
+            System.out.println("Número inválido debe ser mayor que 4 e impar");
+        }
         
     }//main
     
@@ -47,7 +49,7 @@ public class Lab1P2_HanneMendoza {
             }//for interno
         }//for externo
         return temp;
-    }//fin método 
+    }//fin método generarMatriz
 
     public static void imprimirMatriz(int[][] matriz) {
         System.out.println("");
@@ -57,7 +59,25 @@ public class Lab1P2_HanneMendoza {
             }//fin for
             System.out.println("");
         }//fin for
-        }//fin método
-
+        }//fin método imprimirMatriz
+    
+    public static int [] BubbleSort(int [][] matriz){              
+        int [] temp = new int [matriz.length];
+        boolean cambiado = false;
+        int n;
+        int [] array;
+        //caso base
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                    cambiado = true;
+                }
+            }
+        //caso recursivo    
+        return 
+    } 
     
 }//clase
