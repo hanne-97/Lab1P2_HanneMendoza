@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package lab1p2_hannemendoza;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.Random;
 /**
@@ -28,23 +30,24 @@ public class Lab1P2_HanneMendoza {
             System.out.println("Matriz ordenada:");
             int [] array = BubbleSort(mat);
             imprimirArreglo(array);
+            int mediana = (array.length/2)+1;
             
+            ArrayList medianas = new ArrayList();
+            medianas.add(mediana);            
             System.out.println("");
             
             System.out.println("Arreglo de medianas: ");
             
-            // para calcular las medianas mitad/2 + 1
-            // ir añadiendolas en un arraylist
-            //sout
-            System.out.println("");
-            
+            System.out.println("");            
             System.out.println("Arreglo de medianas ordenado: ");
+            Collections.sort(medianas);
             
             //bubble sort   
             System.out.println("");
             System.out.println("Mediana de las medianas: ");
-            int mediana = (array.length/2)+1;
+            mediana = (array.length/2)+1;
             System.out.println(mediana);
+            
         }else{
             System.out.println("Número inválido debe ser mayor que 4 e impar");
         }
@@ -78,8 +81,8 @@ public class Lab1P2_HanneMendoza {
         for (int i = 0; i < matriz.length; i++){
                if(array[i] > array[i + 1]){
                     temp = array[i];
-                    array[i] = array[i + 1];
-                    array[i + 1] = temp;                    
+                    //array[i] = array[i + 1];
+                    //array[i + 1] = temp;                    
                 }           
         }
         //caso recursivo    
