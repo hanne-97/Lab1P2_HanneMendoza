@@ -75,11 +75,11 @@ public class Lab1P2_HanneMendoza {
         }//fin método imprimirMatriz
       
     public static int[] BubbleSort(int[] arreglo) {
-    int n = arreglo.length;
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
+    int temp = arreglo.length;
+    for (int i = 0; i < temp - 1; i++) {
+        for (int j = 0; j < temp - i - 1; j++) {
             if (arreglo[j] > arreglo[j + 1]) {
-                int temp = arreglo[j];
+                int temp2 = arreglo[j];
                 arreglo[j] = arreglo[j + 1];
                 arreglo[j + 1] = temp;
             }
