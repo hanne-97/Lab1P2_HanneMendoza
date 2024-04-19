@@ -28,12 +28,12 @@ public class Lab1P2_HanneMendoza {
             System.out.println("");
             
             System.out.println("Matriz ordenada:");
-            int [] array = BubbleSort(mat);
-            imprimirArreglo(array);
+            //int [] array = BubbleSort();
+            //imprimirArreglo(array);
             
-            int mediana = (array.length/2)+1;            
+            //int mediana = (array.length/2)+1;            
             ArrayList medianas = new ArrayList();
-            medianas.add(mediana);            
+            //medianas.add(mediana);            
             System.out.println("");
             
             System.out.println("Arreglo de medianas: ");
@@ -45,8 +45,8 @@ public class Lab1P2_HanneMendoza {
             //bubble sort   
             System.out.println("");
             System.out.println("Mediana de las medianas: ");
-            mediana = (array.length/2)+1;
-            System.out.println(mediana);
+            //mediana = (array.length/2)+1;
+            //System.out.println(mediana);
             
         }else{
             System.out.println("Número inválido debe ser mayor que 4 e impar");
