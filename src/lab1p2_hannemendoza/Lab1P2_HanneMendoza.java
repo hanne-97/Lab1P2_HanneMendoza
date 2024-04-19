@@ -22,22 +22,29 @@ public class Lab1P2_HanneMendoza {
         if(tam > 4 && tam%2 != 0){
             System.out.println("Matriz generada: ");
             int [][] mat = generarMatriz(tam);
-            imprimirMatriz(mat);
-            
+            imprimirMatriz(mat);            
             System.out.println("");
             
-            System.out.println("Matriz ordenada:"); //forma recursiva bubble sort(ascendente)
+            System.out.println("Matriz ordenada:");
             int [] array = BubbleSort(mat);
             imprimirArreglo(array);
             
+            System.out.println("");
+            
             System.out.println("Arreglo de medianas: ");
+            
             // para calcular las medianas mitad/2 + 1
             // ir añadiendolas en un arraylist
             //sout
+            System.out.println("");
+            
             System.out.println("Arreglo de medianas ordenado: ");
+            
             //bubble sort   
+            System.out.println("");
             System.out.println("Mediana de las medianas: ");
-            //calcular mitad/2 +1
+            int mediana = (array.length/2)+1;
+            System.out.println(mediana);
         }else{
             System.out.println("Número inválido debe ser mayor que 4 e impar");
         }
@@ -59,27 +66,24 @@ public class Lab1P2_HanneMendoza {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                 System.out.print("[" + matriz[i][j] + "] ");
-            }//fin for
+            }
             System.out.println("");
-        }//fin for
+        }
         }//fin método imprimirMatriz
     
     public static int [] BubbleSort(int [][] matriz){              
         int temp;
-        int pos = 0;
-        int [] array = new int [matriz.length];
+        int [] array = new int[matriz.length];
         //caso base
-        for (int i = 0; i < pos-1; i++){
-            for (int j = 0; j < pos-i-1; j++){
-               if (array[j] > array[j + 1]){
-                    temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;                    
-                } 
-            }                
+        for (int i = 0; i < matriz.length; i++){
+               if(array[i] > array[i + 1]){
+                    temp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;                    
+                }           
         }
         //caso recursivo    
-        return array; 
+        return array;  
     }//fin método BubbleSort    
     
      public static void imprimirArreglo(int[] array){        
